@@ -1,0 +1,42 @@
+.staff {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: rem(200px);
+    height: rem(560px);
+    position: absolute;
+    background: url(../../img/staff/team-top-berries.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: -5px;
+    top: rem(-235px);
+    z-index: 0;
+
+    @include tablets {
+      width: rem(150px);
+      height: rem(420px);
+      top: rem(-180px);
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: rem(104px);
+    height: rem(114px);
+    position: absolute;
+    background: url(../../img/staff/team-bottom-berries.png) center center no-repeat;
+    left: rem(40px);
+    bottom: rem(-50px);
+    z-index: 5;
+
+    @include tablets {
+      width: rem(83px);
+      height: rem(91px);
+      background-size: contain;
+      bottom: rem(-40px);
+    }
+  }
+}

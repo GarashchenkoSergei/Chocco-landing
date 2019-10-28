@@ -1,0 +1,21 @@
+.button-order {
+  display: inline-block;
+  padding: rem(15px) rem(45px);
+  text-transform: uppercase;
+  border-radius: rem(50px);
+  font-size: rem(19px);
+  font-weight: bold;
+  color: #0f5a47;
+  z-index: 5;
+}
+
+.form-submit__button {
+  background: $green;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background: #0c4f3e;
+  }
+}

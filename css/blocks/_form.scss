@@ -1,0 +1,238 @@
+.delivery-content__title {
+  @include phones {
+    text-align: center;
+  }
+}
+
+.delivery-content__form {
+  display: flex;
+  width: 85%;
+  justify-content: center;
+  font-size: rem(18px);
+  position: relative;
+  margin-top: rem(20px);
+
+  @include tablets {
+    width: 75%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.form-half {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+  @include tablets {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.form__row {
+  display: flex;
+  flex-direction: row;
+
+  @include tablets {
+    width: 100%;
+
+    :last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.form__block {
+  flex: 1;
+  margin-right: rem(20px);
+  margin-top: rem(15px);
+
+  @include tablets {
+    width: 100%;
+  }
+
+  &_textarea {
+    margin-right: 0;
+  }
+}
+
+.form__input,
+.form__textarea {
+  width: 100%;
+  background: #fff;
+  border: none;
+  font-size: rem(18px);
+  color: #000;
+  padding: rem(18px) rem(11px);
+  margin-top: rem(5px);
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #dde3bd;
+}
+
+.form__textarea {
+  resize: none;
+  overflow: hidden;
+  min-height: rem(180px);
+}
+
+.form-radio {
+  display: flex;
+  margin-top: rem(10px);
+
+  @include tablets {
+    margin-top: rem(50px);
+  }
+}
+
+.radio__buttons {
+  margin-right: rem(30px);
+}
+
+.radio,
+.checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio+label,
+.checkbox+label {
+  position: relative;
+  padding: 0 0 0 rem(35px);
+  cursor: pointer;
+}
+
+.form__checkbox {
+  margin-top: rem(10px);
+
+  @include tablets {
+    margin-top: rem(30px);
+  }
+}
+
+.radio+label:before,
+.checkbox+label:before {
+  content: '';
+  position: absolute;
+  top: rem(-3px);
+  left: 0;
+  width: rem(26px);
+  height: rem(26px);
+  background: #ffffff;
+}
+
+.radio+label:before {
+  border-radius: 50%;
+}
+
+.radio+label:after {
+  content: '';
+  position: absolute;
+  top: rem(3px);
+  left: rem(6px);
+  width: rem(14px);
+  height: rem(14px);
+  border-radius: 50%;
+  background: $green;
+  opacity: 0;
+  transition: .2s;
+}
+
+.radio:checked+label:after {
+  opacity: 1;
+}
+
+.checkbox+label:after {
+  content: '';
+  position: absolute;
+  top: rem(3px);
+  left: rem(6px);
+  width: rem(14px);
+  height: rem(14px);
+  background: url(../../img/order/delivery-checkbox.png) center center no-repeat;
+  opacity: 0;
+  transition: .2s;
+}
+
+.checkbox:checked+label:after {
+  opacity: 1;
+}
+
+.form-submit {
+  margin-top: rem(40px);
+}
+
+.form-clear__button {
+  margin-left: rem(30px);
+}
+
+.form-clear__button {
+  background: none;
+  border: none;
+  color: $green;
+  padding: 0;
+
+  &:hover {
+    cursor: pointer;
+    color: red;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.formSend-popup {
+  display: none;
+
+  &_active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 10;
+  }
+
+  &__content {
+    width: 30%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    flex-direction: column;
+    background-color: #fff;
+
+    & p {
+      font-size: 21px;
+      margin-top: 15px;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    padding: rem(5px) rem(15px);
+    text-transform: uppercase;
+    border-radius: rem(50px);
+    font-size: rem(19px);
+    font-weight: bold;
+    color: #fff;
+    background-color: $green;
+    cursor: pointer;
+    outline: none;
+  }
+
+}

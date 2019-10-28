@@ -1,0 +1,30 @@
+.about {
+  background: url(../../img/about/leaf-about.png) no-repeat left center;
+  position: relative;
+
+  @include tablets {
+    background-position-y: 180px;
+  }
+
+  @include phones {
+    background-size: 40%;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: rem(161px);
+    height: rem(315px);
+    position: absolute;
+    background: url(../../img/about/berries-about.png) center center no-repeat;
+    bottom: rem(-110px);
+    left: rem(0px);
+
+    @include phones {
+      width: rem(112px);
+      height: rem(220px);
+      background-size: contain;
+      bottom: rem(-70px);
+    }
+  }
+}

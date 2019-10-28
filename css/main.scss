@@ -1,0 +1,44 @@
+//colors
+$blue: #61c4d9;
+$grey: #f8faf9;
+$green: #0f5a47;
+
+//breakpoints
+$desktops: 1100px;
+$tablets: 1100px;
+$phones: 767px;
+
+//layout
+@import "./layout/media";
+@import "./layout/normalize";
+@import "./layout/base";
+@import "./layout/fonts";
+
+//sections
+@import "./sections/intro";
+@import "./sections/about";
+@import "./sections/slider";
+@import "./sections/staff";
+@import "./sections/menu";
+@import "./sections/feedback";
+@import "./sections/work";
+@import "./sections/delivery";
+@import "./sections/map";
+@import "./sections/footer";
+
+//blocks
+@import "./blocks/header";
+@import "./blocks/intro-block";
+@import "./blocks/aside";
+@import "./blocks/button";
+@import "./blocks/why";
+@import "./blocks/team";
+@import "./blocks/feedback-content";
+@import "./blocks/clients__list";
+@import "./blocks/form";
+@import "./blocks/bars";
+
+// carousel
+@import "./carousel/owl.carousel.min.scss";
+@import "./carousel/owl.theme.default.scss";
+

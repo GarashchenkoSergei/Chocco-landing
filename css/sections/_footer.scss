@@ -1,0 +1,78 @@
+.footer {
+  width: 100%;
+  height: rem(93px);
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+
+  @include phones {
+    height: rem(155px);
+  }
+
+  &__content {
+    width: 100%;
+    padding: rem(15px) rem(80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablets {
+      padding: rem(15px) 0;
+    }
+
+    @include phones {
+      flex-direction: column;
+      padding: 0;
+      flex: 1;
+      justify-content: center;
+    }
+
+    &-contacts {
+      @include phones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &-social {
+      @include phones {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  & a {
+    color: $green;
+  }
+}
+
+.social-icons__list {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons__link {
+  margin-right: rem(20px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.contacts__logo-image_footer {
+  fill: $green;
+  width: rem(12px);
+  height: rem(12px);
+}
+
+.social-icons__picture {
+  width: rem(20px);
+  height: rem(20px);
+  fill: #000;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+}

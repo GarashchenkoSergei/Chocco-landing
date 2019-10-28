@@ -1,0 +1,128 @@
+.feedback-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+
+  @include tablets {
+    justify-content: space-around;
+  }
+
+  @include phones {
+    justify-content: center;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__review {
+    margin-top: rem(40px);
+    display: none;
+    width: rem(940px);
+    height: rem(350px);
+    background: url(../../img/feedback/flower-feedback.png) $grey top right no-repeat;
+    ;
+    padding: rem(50px) 0 rem(40px) rem(45px);
+    position: relative;
+
+    &_first {
+      display: flex;
+    }
+
+    @include tablets {
+      margin-top: 30px;
+      width: 70%;
+      height: 65%;
+      padding: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include phones {
+      margin-top: 30px;
+      width: 100%;
+      height: 50%;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: rem(100px);
+      height: rem(100px);
+      position: absolute;
+      background: #ffffff;
+      border-radius: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      top: rem(-75px);
+      z-index: 0;
+    }
+  }
+}
+
+.review__picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include tablets {
+    width: 40%;
+  }
+
+  &-pic {
+    width: rem(260px);
+    height: rem(260px);
+
+    @include tablets {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @include tablets {
+    margin-top: rem(70px);
+  }
+}
+
+.review__desc {
+  margin-left: rem(20px);
+  font-size: rem(18px);
+  color: #666666;
+
+  @include tablets {
+    margin: 0;
+    width: 80%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &-text {
+    margin-top: rem(20px);
+    width: rem(450px);
+    height: rem(150px);
+    overflow: hidden;
+
+    @include tablets {
+      margin-top: 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &-name {
+    display: block;
+    margin-top: rem(20px);
+
+    @include tablets {
+      margin-top: 0;
+    }
+  }
+}

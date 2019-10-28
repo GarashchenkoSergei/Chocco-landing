@@ -1,0 +1,50 @@
+.aside {
+    position: fixed;
+    top: 32%;
+    right: rem(60px);
+    z-index: 5;
+
+    @include tablets {
+        display: none;
+    }
+
+    &__item {
+        margin-bottom: rem(6px);
+    }
+
+    &__link {
+        position: relative;
+        width: rem(16px);
+        height: rem(16px);
+        display: block;
+        border-radius: 50%;
+
+        &:hover {
+            border: 1px solid #ffffff;
+            box-shadow: 0 0 4px black;
+        }
+
+        &::before {
+            display: block;
+            position: absolute;
+            content: "";
+            width: rem(6px);
+            height: rem(6px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 0 4px black;
+        }
+    }
+}
+
+.aside__item {
+    &.active {
+        .aside__link {
+            border: 1px solid #ffffff;
+            box-shadow: 0 0 4px black;
+        }
+    }
+}

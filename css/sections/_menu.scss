@@ -1,0 +1,81 @@
+.menu {
+  position: relative;
+  background-image: url(../../img/menu/menu-bars1.png);
+  background-position: center center;
+  background-size: cover;
+  
+  //добавлена высота блока, чтобы не схлопывалась
+  @include tablets {
+    height: 650px;
+  }
+
+  &__title {
+    color: #fff;
+    margin-top: rem(100px);
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__list {
+    height: 100%;
+    display: flex;
+  }
+
+  &__item {
+    height: 100%;
+    display: flex;
+  }
+
+  &__subtitle {
+    height: 100%;
+    width: rem(100px);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: rem(10px);
+
+    @include phones {
+      width: rem(55px);
+    }
+  
+    & p {
+      transform: rotate(-90deg) translate(50%);
+      color: #fff;
+      font-size: rem(40px);
+      font-weight: bold;
+      white-space: nowrap;
+
+      @include phones {
+        font-size: rem(30px);
+      }
+    }
+  }
+
+  &__item-block {
+    display: none;
+    width: rem(430px);
+    height: 100%;
+    padding: rem(55px) rem(25px);
+    color: #fff;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+
+    @include tablets {
+      width: 100%;
+    }
+  }
+}
+
+.menu__subtitle-name {
+  cursor: pointer;
+}
+
+.menu__subtitle_active + .menu__item-block {
+  display: block;
+}

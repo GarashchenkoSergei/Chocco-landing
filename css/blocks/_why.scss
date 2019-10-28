@@ -1,0 +1,149 @@
+.why {
+  display: flex;
+  flex: 0.96;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include tablets {
+    padding: 40px 0;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-subtitle {
+      width: rem(410px);
+      margin-top: rem(5px);
+      font-size: rem(18px);
+      font-weight: normal;
+      text-align: center;
+      color: #666666;
+
+      @include phones {
+        width: 90%;
+      }
+    }
+  }
+
+  &__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablets {
+      flex: 1;
+    }
+  }
+}
+
+.description__list {
+  margin-top: rem(55px);
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+
+  @include tablets {
+    flex-direction: column;
+    margin-top: 0;
+    align-items: center;
+    flex: 1;
+    justify-content: space-around;
+  }
+}
+
+.description__item {
+  width: 27%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @include tablets {
+    width: 40%; 
+    margin-top: 20px;
+  }
+
+  @include phones {
+    width: 70%; 
+    margin-top: 20px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: rem(67px);
+    height: rem(21px);
+    position: absolute;
+    background: url(../../img/about/dots-about.png) center center no-repeat;
+    top: 18%;
+    left: 100%;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
+
+.description__item-pic {
+  display: block;
+  width: rem(125px);
+  height: rem(125px);
+  background: #f2f5f4;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description__item-picture {
+  width: rem(70px);
+  height: rem(70px);
+}
+
+.description__item-text {
+  margin-top: rem(30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include tablets {
+    margin-top: 10px;
+  }
+}
+
+.item-text__paragraph {
+  margin-top: rem(15px);
+  font-size: rem(18px);
+  text-align: center;
+  color: #666666;
+
+  @include tablets {
+    margin-top: 10px;
+  }
+}
+
+.face,
+.man,
+.strong {
+  fill: none;
+  width: rem(70px);
+  height: rem(70px);
+  fill: none;
+  stroke: #000000;
+  stroke-width: 0.75;
+  stroke-miterlimit: 10;
+}
+
+.man {
+  fill: #f2f5f4;
+}

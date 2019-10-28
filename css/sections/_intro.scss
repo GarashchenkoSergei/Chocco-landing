@@ -1,0 +1,70 @@
+.intro {
+  background: url(../../img/intro/blue-leafs-intro.png) no-repeat $blue right 0 bottom 0;
+  position: relative;
+
+  @include tablets {
+    background-position: right 0 top 0;
+  }
+
+  @include phones {
+    background-size: 85%;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: rem(59px);
+    height: rem(112px);
+    position: absolute;
+    background: url(../../img/intro/leafs-left.png) center center no-repeat;
+    bottom: rem(-53px);
+    left: rem(47px);
+
+    @include tablets {
+      width: rem(48px);
+      height: rem(90px);
+      background-size: contain;
+      top: rem(380px);
+      left: rem(170px);
+      z-index: 1;
+    }
+
+    @include phones {
+      width: rem(48px);
+      height: rem(90px);
+      background-size: contain;
+      top: rem(365px);
+      left: rem(40px);
+      z-index: 1;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: rem(463px);
+    height: rem(345px);
+    position: absolute;
+    background: url(../../img/intro/leafs-right.png) center center no-repeat;
+    bottom: rem(-43px);
+    right: rem(28px);
+
+    @include tablets {
+      width: rem(370px);
+      height: rem(276px);
+      background-size: contain;
+      top: rem(280px);
+      right: rem(150px);
+      z-index: 1;
+    }
+
+    @include phones {
+      width: rem(370px);
+      height: rem(276px);
+      background-size: contain;
+      top: rem(270px);
+      right: rem(25px);
+      z-index: 1;
+    }
+  }
+}

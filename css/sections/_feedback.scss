@@ -1,0 +1,48 @@
+.feedback {
+  position: relative;
+
+  &::before {
+      content: "";
+      display: block;
+      width: rem(154px);
+      height: rem(422px);
+      position: absolute;
+      background: url(../../img/feedback/berries-feedback.png) center center no-repeat;
+      bottom: rem(-200px);
+      left: rem(0px);
+      z-index: 5;
+
+      @include tablets {
+        width: rem(123px);
+        height: rem(337px);
+        background-size: contain;
+        bottom: rem(-150px);
+      }
+
+      @include phones {
+        width: rem(100px);
+        height: rem(274px);
+        background-size: contain;
+        bottom: rem(-100px);
+      }
+  }
+
+  &::after {
+      content: "";
+      display: block;
+      width: rem(173px);
+      height: rem(99px);
+      position: absolute;
+      background: url(../../img/feedback/berries2-feedback.png) center center no-repeat;
+      top: 0;
+      right: rem(20px);
+
+      @include tablets {
+        width: rem(138px);
+        height: rem(79px);
+        background-size: contain;
+        top: rem(15px);
+        right: rem(-30px);
+      }
+  }
+}

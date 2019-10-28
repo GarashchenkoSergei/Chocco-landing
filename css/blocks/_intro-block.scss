@@ -1,0 +1,120 @@
+.intro-block {
+  padding-left: rem(80px);
+  padding-right: rem(26px);
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+
+  @include tablets {
+    padding: 0;
+    flex-direction: column-reverse;
+  }
+}
+
+.intro-content {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  @include tablets {
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title,
+  &__subtitle {
+    margin-top: rem(15px);
+    width: 70%;
+
+    @include tablets {
+      text-align: center;
+      margin-top: 0;
+      width: 50%;
+    }
+
+    @include phones {
+      text-align: center;
+      margin-top: 0;
+      width: 100%;
+    }
+  }
+
+  &__button {
+    margin-top: rem(15px);
+    background-color: #ffffff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+
+    @include phones {
+      text-align: center;
+    }
+
+    &:hover {
+      background-color: $green;
+      color: #ffffff;
+      cursor: pointer;
+    }
+  }
+
+  &__advantages {
+    margin-top: rem(70px);
+    font-size: rem(16px);
+    display: flex;
+
+    @include tablets {
+      margin: rem(50px) 0;
+    }
+  }
+}
+
+.advantages-item {
+  display: flex;
+  flex-grow: 1;
+  width: rem(160px);
+
+  @include phones {
+    width: rem(120px);
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &__pic {
+    min-width: rem(50px);
+    min-height: rem(50px);
+    margin-right: rem(9px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    @include phones {
+      margin-right: rem(5px);
+    }
+
+    &-image {
+      width: rem(45px);
+      height: rem(45px);
+      fill: none;
+      stroke: #b0f7ff;
+      stroke-width: 0.5;
+      stroke-miterlimit: 10;
+    }
+  }
+}
+
+.image-truck {
+  fill: $blue;
+}
+
+.intro-pic {
+  margin-top: rem(-96px);
+
+  @include tablets {
+    transform: scale(0.8);
+    margin-top: rem(-70px);
+  }
+}

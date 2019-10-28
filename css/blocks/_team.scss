@@ -1,0 +1,142 @@
+.team {
+  padding: 0 7%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include tablets {
+    padding: 10% 17%;
+    justify-content: center;
+  }
+
+  @include phones {
+    padding: 13% 0%;
+  }
+
+  &__workers {
+    margin-top: rem(60px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    @include tablets {
+      width: 100%;
+      margin-left: rem(-15px);
+      // flex: 1;
+      justify-content: center;
+    }
+
+    &-item {
+      width: 23%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @include tablets {
+        width: 45%;
+        margin: 0 0 0 rem(15px);
+      }
+
+      &:nth-child(even) {
+        margin-top: rem(60px);
+
+        @include tablets {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.workers-pic {
+  overflow: hidden;
+  width: 100%;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.worker-desc {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  min-height: 100px;
+
+  &__title {
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: rem(6px) solid transparent;
+      border-right: rem(6px) solid transparent;
+      border-bottom: rem(6px) solid transparent;
+      border-top: rem(6px) solid $green;
+      position: absolute;
+      right: -15px;
+      top: 12px;
+
+      @include phones {
+        top: 8px;
+      }
+    }
+
+    @include phones {
+      font-size: rem(18px);
+    }
+
+    &_active {
+      &::after {
+        border-bottom: rem(6px) solid $green;
+        border-top: rem(6px) solid transparent;
+        top: 7px;
+
+        @include phones {
+          top: 3px;
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: rem(18px);
+
+    @include phones {
+      font-size: rem(16px);
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-size: rem(18px);
+    color: #666666;
+
+    @include phones {
+      font-size: rem(14px);
+    }
+  }
+}
+
+.worker-desc__hide {
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: .4s;
+}
+
+.worker-desc__title_active + .worker-desc__hide {
+  height: 100px;
+}

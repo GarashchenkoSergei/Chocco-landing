@@ -1,0 +1,9 @@
+@each $font in (normal, bold) {
+    @font-face {
+        font-family: 'AlegreyaSans';
+        src: url('../../fonts/AlegreyaSans-#{$font}.woff'),
+        url('../../fonts/AlegreyaSans-#{$font}.woff2');
+        font-weight: #{$font};
+        font-style: normal;
+    }
+}
